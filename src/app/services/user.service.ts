@@ -16,19 +16,12 @@ export class UserService {
     localStorage.setItem('userId', newUser.id.toString()); 
     console.log('Usuário criado com ID:', newUser.id); 
   }
+  
   editUser(updatedUser: any) {
-    
     const users = this.getUsers();
-  
-   
     const index = users.findIndex(user => user.id === updatedUser.id);
-  
-    
     if (index !== -1) {
       users[index] = updatedUser;
-  
-      
-
       localStorage.setItem('users', JSON.stringify(users));
     }
   }

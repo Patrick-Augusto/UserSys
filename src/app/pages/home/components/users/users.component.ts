@@ -17,7 +17,8 @@ export class UsersComponent implements OnInit {
   }
 
   editUser(user: any) {
-    this.router.navigate(['/app/edit-user']);
+    localStorage.setItem('userId', user.id.toString());
+    this.router.navigate(['/app/edit-user', user.id]);
   }
 
   newUser() {

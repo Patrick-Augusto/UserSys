@@ -17,12 +17,14 @@ const routes: Routes = [
     path: "app", component: HomeComponent,
     children: [
       {path: "", component: WelcomeComponent},
+      {path: 'app/edit-user/:id', component: EditUserComponent },
       {path: "users", component: UsersComponent},
       {path: "todo-list", component: TodoListComponent},
       {path: "add-user", component: AddUserComponent},
       {path: "edit-user", component: EditUserComponent}
     ]
-  }
+  },
+  {path: 'app/edit-user/:id', component: EditUserComponent }
 ]
 
 
