@@ -1,0 +1,16 @@
+<form [formGroup]="userForm" (ngSubmit)="saveUser()">
+    <label for="name">Nome:</label>
+    <input type="text" id="name" formControlName="name" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="email" required>
+    <label for="function">Função:</label>
+    <select id="function" formControlName="function" required>
+        <option value="Engenheiro de FE">Engenheiro de FE</option>
+        <option value="Engenheiro de BE">Engenheiro de BE</option>
+        <option value="Analista de dados">Analista de dados</option>
+        <option value="Líder Técnico">Líder Técnico</option>
+    </select>
+    <label for="password">Senha:</label>
+    <input type="password" id="password" formControlName="password" minlength="6" maxlength="15" required>
+    <button type="submit" [disabled]="userForm.invalid">Salvar</button>
+</form>

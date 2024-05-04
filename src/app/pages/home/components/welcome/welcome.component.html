@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <div class="row align-items-center text-center full-height">
+    <div class="col">
+      <h3>Informações do Usuário</h3>
+      <h4><p>Quantidade de usuários cadastrados: {{ totalUsers }}</p></h4>
+      <h4>Quantidade de usuários por funções:</h4>
+      <table>
+        <tr>
+          <th>Função</th>
+          <th>Quantidade</th>
+        </tr>
+        <tr *ngFor="let role of functions">
+          <td>{{ role.function}}</td>
+          <td>{{ role.count }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

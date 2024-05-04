@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <div class="row align-items-left text-left">
+    <div class="col content">
+      <table class="table table-dark table-hover table-item text-center">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Task Description</th>
+            <th scope="col">Completed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let task of taskList" [ngClass]="{'task-done': task.done}" (click)="changeTask(task)">
+            <th scope="row"></th>
+            <td>{{ task.description }}</td>
+            <td>
+              <input class="form-check-input" type="checkbox" [(ngModel)]="task.done" [checked]="task.done">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
