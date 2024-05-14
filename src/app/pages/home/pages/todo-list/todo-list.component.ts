@@ -10,9 +10,11 @@ interface Task {
   templateUrl: './todo-list.component.html',
   styleUrls: ['./todo-list.component.css']
 })
-export class TodoListComponent {
 
+
+export class TodoListComponent {
   taskList: Task[] = []
+  newTaskDescription: string = '';
 
   constructor() {
     this.taskList = [
@@ -24,5 +26,13 @@ export class TodoListComponent {
 
   changeTask(task: Task) {
     task.done = !task.done
+  }
+
+  addTask(taskDescription: string) {
+    this.taskList.push({done: false, description: taskDescription});
+  }
+
+  removeTask(taskDescription: string) {
+    this.taskList = this.taskList.filter(task => task.description !== taskDescription);
   }
 }
