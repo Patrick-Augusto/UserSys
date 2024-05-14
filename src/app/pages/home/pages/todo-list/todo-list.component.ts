@@ -11,7 +11,6 @@ interface Task {
   styleUrls: ['./todo-list.component.css']
 })
 
-
 export class TodoListComponent {
   taskList: Task[] = []
   newTaskDescription: string = '';
