@@ -5,9 +5,8 @@
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Task Description</th>
-            <th scope="col">Completed</th>
-            <th scope="col">Função</th>
+            <th scope="col">Descrição de Tarefa</th>
+            <th scope="col">Completo</th>
           </tr>
         </thead>
         <tbody>
@@ -22,9 +21,9 @@
       </table>
       <div class="row">
         <div class="col">
-          <input type="text" [(ngModel)]="newTaskDescription" placeholder="Escreva uma Task ...">
-          <button type="button" (click)="addTask(newTaskDescription)">Adicionar Task</button>
-          <button type="button" (click)="removeTask(newTaskDescription)">Remover Task</button>
+          <input [(ngModel)]="newTaskDescription" class="task-input" placeholder="Digite uma tarefa ...">
+          <button (click)="addTask(newTaskDescription)" class="add-task">Adicionar Tarefa</button>
+          <button (click)="removeTask(newTaskDescription)" class="remove-task">Remover Tarefa</button>
         </div>
       </div>
     </div>
