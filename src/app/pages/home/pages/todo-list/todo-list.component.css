@@ -12,3 +12,29 @@
 .task-done {
   text-decoration: line-through;
 }
+
+.remove-task {
+  background-color: red;
+  border-radius: 0px;
+  color: white;
+  margin-right: 0px;
+  width: 10%;
+  padding: 5px;
+}
+
+.add-task { 
+  background-color: blue;
+  border-radius: 0px;
+  color: white;
+  margin-right: 0px;
+  width: 10%;
+  padding: 5px;
+}
+
+.task-input {
+  width: 80%;
+  border-radius: 0px;
+  margin-right: 0px;
+  text-align: center;
+  padding: 5px;
+}
