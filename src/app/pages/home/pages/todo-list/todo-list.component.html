@@ -7,6 +7,7 @@
             <th scope="col">#</th>
             <th scope="col">Task Description</th>
             <th scope="col">Completed</th>
+            <th scope="col">Função</th>
           </tr>
         </thead>
         <tbody>
@@ -19,6 +20,13 @@
           </tr>
         </tbody>
       </table>
+      <div class="row">
+        <div class="col">
+          <input type="text" [(ngModel)]="newTaskDescription" placeholder="Escreva uma Task ...">
+          <button type="button" (click)="addTask(newTaskDescription)">Adicionar Task</button>
+          <button type="button" (click)="removeTask(newTaskDescription)">Remover Task</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
