@@ -1,3 +1,4 @@
+/* Layout principal */
 .full-height {
   height: 80vh;
   display: flex;
@@ -5,25 +6,104 @@
   align-items: center;
 }
 
+/* Container da página */
 .container-fluid {
-  padding: 20px;
+  padding: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
+/* Títulos e textos */
 h1, h2, h3, h4 {
   margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #333;
 }
 
+h3 {
+  font-size: 28px;
+  font-weight: 500;
+  color: #3F4F5C; /* Cor destaque */
+}
+
+h4 {
+  font-size: 22px;
+  color: #666;
+}
+
+p {
+  margin: 0;
+  font-size: 18px;
+  color: #666;
+}
+
+/* Tabela de informações */
 table {
   width: 100%;
   margin-top: 20px;
   border-collapse: collapse;
+  font-family: 'Roboto', sans-serif;
 }
 
 th, td {
+  padding: 12px 15px;
+  text-align: left;
   border: 1px solid #ddd;
-  padding: 8px;
+  font-size: 16px;
+  color: #333;
 }
 
+/* Estilo dos cabeçalhos da tabela */
 th {
+  background-color: #3F4F5C; /* Cor principal */
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Estilo das células */
+td {
+  background-color: #fff;
+  color: #555;
+}
+
+/* Estilo para as linhas pares da tabela */
+tr:nth-child(even) td {
   background-color: #f2f2f2;
+}
+
+/* Estilo ao passar o mouse sobre as linhas da tabela */
+tr:hover td {
+  background-color: #e0f7fa;
+}
+
+/* Efeito de sombra nas tabelas */
+table {
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+}
+
+/* Estilo para dispositivos móveis */
+@media (max-width: 768px) {
+  .container-fluid {
+    padding: 15px;
+  }
+
+  th, td {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
 }

@@ -10,8 +10,8 @@ import { UserService } from 'src/app/services/user.service';
 export class WelcomeComponent implements OnInit {
   totalUsers: number = 0;
   functions: {function: string, count: number}[] = [
-    {function: 'Engenheiro de FE', count: 0},
-    {function: 'Engenheiro de BE', count: 1},
+    {function: 'Engenheiro Eletricista JR', count: 0},
+    {function: 'Engenheiro Eletricista', count: 1},
     {function: 'Analista de dados', count:1},
     {function: 'Líder Técnico', count: 1}
   ];
