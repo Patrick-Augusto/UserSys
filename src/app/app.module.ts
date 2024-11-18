@@ -10,9 +10,13 @@ import { UsersComponent } from './pages/home/components/users/users.component';
 import { AppRoutingModule } from './app-routing.module';
 import { WelcomeComponent } from './pages/home/components/welcome/welcome.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { TodoListComponent } from './pages/home/pages/todo-list/todo-list.component';
 import { AddUserComponent } from './pages/home/components/add-user/add-user.component';
 import { EditUserComponent } from './pages/home/components/edit-user/edit-user.component';
+import { FileListComponent } from './pages/home/components/file-list/file-list.component';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,16 +29,24 @@ import { EditUserComponent } from './pages/home/components/edit-user/edit-user.c
     WelcomeComponent,
     TodoListComponent,
     AddUserComponent,
-    EditUserComponent
+    EditUserComponent,
+    FileListComponent
   ],
   imports: [
     BrowserModule,
     RouterModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    BrowserModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [ {
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true,
+  },],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

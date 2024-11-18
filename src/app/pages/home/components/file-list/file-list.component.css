@@ -1,0 +1,27 @@
+/* src/app/pages/home/components/file-list/file-list.component.css */
+.container {
+    margin-top: 20px;
+  }
+  
+  .table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+  }
+  
+  .table th,
+  .table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+  }
+  
+  .thead-dark th {
+    background-color: #343a40;
+    color: white;
+  }
+  
+  .btn {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+  }
